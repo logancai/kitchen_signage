@@ -16,5 +16,6 @@ blueiris.js
       -box = document.getElementById('CamList');
       -Your camlabel = box.options[box.selectedIndex].innerHTML;
       -And destination = box.options[box.selectedIndex].value;
+
   -And modify the server's address
     -The placeholder address is http://192.168.1.113
