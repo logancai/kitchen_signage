@@ -1,0 +1,65 @@
+/*
+Main CSS
+*/
+@width: 1024px;
+@height: 600px;
+
+#main{
+	width: @width;
+	height: @height;
+}
+
+#photo {
+	width: @width;
+	height: @height;
+	overflow: hidden;
+	z-index: 1;
+}
+#info{
+	width: 100%;
+	position: fixed;
+	padding-left: 15px;
+	left: 0px;
+	bottom: 0px;
+	z-index: 2;
+}
+#datetime{
+	color: #fff;
+	text-shadow: 1px 1px #000;
+}
+#datetime .h1, h1 {
+	margin-bottom: 0;
+	font-size: 5.1em;
+}
+#datetime .h2, h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+#weather{
+	color: #fff;
+	text-shadow: 1px 1px #000;
+}
+#weather img{
+	float: left;
+	width: 25px;
+	margin-right: 10px;
+	padding-top: 3px;
+}
+#weather .h3, h3{
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+#photo-info{
+	background: #D3D3D3;
+	opacity: 0.7;
+}
+#surveillance{
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	width: 30%;
+	z-index: 3;
+}
+.webcam {
+	width: 100%;
+}
