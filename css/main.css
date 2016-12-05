@@ -7,13 +7,29 @@ Main CSS
 #main{
 	width: @width;
 	height: @height;
+	background-color:#000000;
 }
-
 #photo {
-	width: @width;
-	height: @height;
 	overflow: hidden;
 	z-index: 1;
+}
+#photo img{
+	width: 100%;
+}
+.swiper-slide{
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
 }
 #info{
 	width: 100%;

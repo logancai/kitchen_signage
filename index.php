@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,8 +21,13 @@
   </head>
   <body>
     <div class="" id="main">
-    	<div class="" id="photo">
-	    	<img class="img-responsive" src="img/DSC_5715-1.jpg" alt="trees" />
+    	<div class="swiper-container" id="photo">
+	    	<div class="swiper-wrapper" id="photo-wrapper">
+            	<!--Javascript will put pictures in here and automatically remove them-->
+                <!--<div class="swiper-slide">
+                	<img src="img/DSC_5715-1.jpg"/>
+                </div>-->
+            </div>
 	    </div>
 	    <div class="" id="info">
 	    	<div class="" id="datetime">
@@ -37,7 +43,7 @@
 	    	</div>
 	    </div>
 	    <div class="img-thumbnail" id="surveillance">
-	    <img class="webcam" src="" border="0" name="webcam" onclick="resize();">
+	    <img class="webcam" src="" border="0" name="webcam" onclick="resize(); document.documentElement.webkitRequestFullScreen(); loadImage();">
 	    </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -46,6 +52,12 @@
     <script src="js/main.js" type="text/javascript"></script>
     <script src="js/openweather.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+    <script src="js/googlephoto.js" type="text/javascript"></script>
+    <script src="js/swiper.jquery.min.js" type="text/javascript"></script>
+    <script>
+	
+    
+    </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>

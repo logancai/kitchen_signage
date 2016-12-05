@@ -23,9 +23,14 @@ var refreshmsec = 50;
   
 function startTimer(){
   timerID = window.setTimeout( "loadImage()",refreshmsec );
+  watchdogID = window.setTimeout( "watchdog()",refreshmsec );
   timerRunning = true;
 }
-
+function watchdog(){
+	if(document.images.webcam.onload == null){
+		loadImage();
+	}
+}
 function loadImage(){
   var tmp = new Date(); 
 
@@ -37,10 +42,13 @@ function loadImage(){
   }
   else
   {
-    document.images.webcam.onload = null;
-    document.images.webcam.onerror = null;
+    /*document.images.webcam.onload = null;
+    document.images.webcam.onerror = null;*/
+	document.images.webcam.onload = startTimer;
+    document.images.webcam.onerror = startTimer;
   }
 
+  
   document.images.webcam.src = campath + "?time=" + (tmp.getTime()-basetime);
 }
 
@@ -188,7 +196,7 @@ function opencam(){
       camname = pieces[3];
       // Commented out because we need to specify the path of server
       // campath = "/image/" + camname;
-      campath = "http://192.168.1.113"+"/image/" + camname;
+      campath = pieces[0]+"//"+pieces[2]+"/image/" + camname;
       
 //        changeLinkHref( "preset1", "/cam/" + pieces[3] + "/pos=8" );
 //        changeLinkHref( "preset2", "/cam/" + pieces[3] + "/pos=9" );

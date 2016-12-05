@@ -3,7 +3,7 @@ $(function(){
     /* Configuration */
 
     var DEG = 'f';  // c for celsius, f for fahrenheit
-    var API_key = 'YOUR_API_KEY';
+    var API_key = 'a1bb0927636af31a1c8395b995b19338';
     var id = '5391959'; //actually, it's a city ID
 
     var weatherDiv = $('#weather'),
@@ -31,9 +31,9 @@ $(function(){
             if((cache && cache.timestamp) && (cache.timestamp > (d.getTime() - 30*60*1000))){
             	var string = "";
             	string = string + convertTemperature(cache.data.main.temp) + '&#176;F ' + cache.data.weather[0].main;
-            	if ((cache.data.weather[0].id > 200 && cache.data.weather[0].id < 700) || (cache.data.weather[0].id > 900)){
-            		string = string + " " + cache.data.weather[0].description;
-            	}
+            	// if ((cache.data.weather[0].id > 200 && cache.data.weather[0].id < 700) || (cache.data.weather[0].id > 900)){
+            	// 	string = string + " " + cache.data.weather[0].description;
+            	// }
             	weatherText.html(string);
             	weatherIcon.attr('src','img/weather/'+ cache.data.weather[0].icon +'.svg');
             }
